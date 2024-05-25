@@ -1,0 +1,30 @@
+<!-- resources/views/jabatan/pdf.blade.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jabatan Report</title>
+</head>
+<body>
+    <h1>Jabatan Report</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nama Jabatan</th>
+                <th>Golongan</th>
+                <th>Tunjangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($jabatans as $jabatan)
+                <tr>
+                    <td>{{ $jabatan->nama_jabatan }}</td>
+                    <td>{{ $jabatan->golongan }}</td>
+                    <td>{{ $jabatan->tunjangan }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</body>
+</html>
